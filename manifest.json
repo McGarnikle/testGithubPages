@@ -1,6 +1,7 @@
 {
   "name": "Critique Sadique",
   "short_name": "SadCrit",
+  "description": "Site de critique",
   "icons": [
      {
         "src": "./assets/maskables/maskable_icon_x48.png",
