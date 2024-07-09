@@ -50,9 +50,7 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Wonder Widgets"
-    }
-  ],
-  "screenshot": [
+    },
     {
       "src": "./assets/maskables/maskable_icon_x512.png",
       "sizes": "512x512",
@@ -61,4 +59,5 @@
       "label": "Wonder Widgets"
     }
   ]
+  
 }
