@@ -1,0 +1,107 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+%form {
+   background-color: $light-shade;
+   border-radius: 0.5rem;
+   font-family: "Jost";
+   padding: 0.5rem;
+   width: 100%;
+}
+
+#contact {
+   padding: 6rem 0;
+   position: relative;
+
+   iframe {
+      width: 100%;
+   }
+
+   .contact-display {
+      position: absolute;
+      margin-right: 4rem;
+      right: 0;
+      top: calc(50% - 285px);
+
+      .contact {
+         @include boxShadow();
+         background-image: $dark-gradient;
+         border-radius: 1rem;
+         color: $light-shade;
+         padding: 2%;
+         width: 35rem;
+         z-index: 2;
+
+         &__text {
+            width: 60%;
+
+            h3 {
+               @include textShadow();
+            }
+         }
+
+         &__input-control input:focus {
+            outline: 0
+         }
+
+         &__input-control.success input {
+            border: 3px solid $success;
+         }
+
+         &__input-control.error input {
+            border: 3px solid $error;
+         }
+
+         &__input-control.success textarea {
+            border: 3px solid $success;
+         }
+
+         &__input-control.error textarea {
+            border: 3px solid $error;
+         }
+
+         &__input-control .errorMessage {
+            color: $error;
+            font-size: 1em;
+            height: 13px;
+         }
+
+         &__input {
+            @extend %form;
+            outline: none;
+            outline-offset: 0px;
+         }
+
+         .names {
+            display: flex;
+            justify-content: space-between;
+
+            .contact__input-control {
+               width: 49%;
+            }
+         }
+
+         &__btn {
+            @include boxShadow();
+            @include textShadow();
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background-color: $light-accent;
+            border-radius: 0.5rem;
+            color: $dark-shade;
+            transition: $transition;
+
+            &:hover {
+               @include boxShadow($color: $light-accent);
+               background-color: $dark-accent;
+               color: $light-shade;
+               transition: $transition;
+            }
+         }
+      }
+   }
+}
+
+.contact__required {
+   text-align: center;
+}

@@ -1,0 +1,28 @@
+@use "mixins" as *;
+@use "variables" as *;
+@use "utilities/general" as *;
+@use "utilities/navigation" as *;
+@use "utilities/carousel" as *;
+@use "utilities/survey" as *;
+@use "utilities/critic" as *;
+@use "utilities/gallery" as *;
+@use "utilities/stats" as *;
+@use "utilities/casting" as *;
+@use "utilities/contact" as *;
+@use "utilities/footer" as *;
+@use "utilities/media-queries/max1250" as *;
+@use "utilities/media-queries/max980" as *;
+@use "utilities/media-queries/max800" as *;
+@use "utilities/media-queries/max624" as *;
+
+/* ---------- Fonts ---------- */
+
+@font-face {
+   font-family: "Higher-Jump";
+   src: url(../../assets/fonts/Higher\ Jump.ttf);
+}
+
+@font-face {
+   font-family: "Jost";
+   src: url(../../assets/fonts/Jost-VariableFont_wght.ttf);
+}

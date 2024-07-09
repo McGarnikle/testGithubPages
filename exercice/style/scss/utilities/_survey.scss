@@ -1,0 +1,74 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+%input {
+   @include boxShadow();
+   margin: 0 1rem;
+   padding: 0.5rem 1rem;
+}
+
+%button {
+   background-color: $light-accent;
+   color: $dark-shade;
+   transition: $transition;
+}
+
+.review {
+   margin-bottom: 4rem;
+   text-align: center;
+
+   &__text {
+      font-size: 1em;
+      margin: 4rem 0 2% 0;
+      text-align: center;
+   }
+
+   input[type="text"] {
+      @extend %input;
+      background-color: $light-shade;
+      border-radius: 0.2rem;
+   }
+
+   input[type="submit"] {
+      @extend %input;
+      @include textShadow();
+      background-color: $dark-accent;
+      border-radius: 0.5rem;
+      color: $light-shade;
+      transition: $transition;
+
+      &:hover {
+         @extend %button;
+      }
+   }
+}
+
+.banner {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   background-image: $dark-gradient;
+
+   &__text {
+      @include textShadow();
+      color: $light-shade;
+      font-size: 2em;
+      margin: 2%;
+      text-align: center;
+      vertical-align: middle;
+   }
+
+   &__btn {
+      @include textShadow();
+      background-color: $dark-accent;
+      border-radius: 0.5rem;
+      color: $light-shade;
+      margin: 2%;
+      padding: 0.5rem 2rem;
+      transition: $transition;
+
+      &:hover {
+         @extend %button;
+      }
+   }
+}

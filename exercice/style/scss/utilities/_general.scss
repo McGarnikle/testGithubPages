@@ -1,0 +1,52 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-image: $bg-body;
+   color: $dark-shade;
+   font-family: "Jost";
+}
+
+.screen-reader-text {
+   border: 0;
+   clip: rect(1px, 1px, 1px, 1px);
+   clip-path: inset(50%);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+   word-wrap: normal !important;
+}
+
+.container {
+   width: 90%;
+   max-width: 2000px;
+   margin: 0 auto;
+}
+
+.navbar__burger-menu {
+   display: none;
+}
+
+main {
+   margin-top: 10rem;
+}
+
+.separation {
+   @include boxShadow($blur: 0.05rem);
+   margin: 3rem 0;
+   border-color: $dark-accent;
+   border-radius: 0.3rem;
+   border-width: 0.2rem;
+}

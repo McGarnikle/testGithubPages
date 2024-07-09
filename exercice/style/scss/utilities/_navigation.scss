@@ -1,0 +1,64 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+%logo {
+   @include textShadow();
+   color: $light-accent;
+   font-family: "Higher-Jump";
+   text-decoration: none;
+   transition: $transition;
+
+   &:hover {
+      text-shadow: 0.1rem 0.1rem 0.1rem whitesmoke;
+      transition: $transition;
+   }
+}
+
+header {
+   @include boxShadow();
+   background-image: $dark-gradient;
+   height: 5rem;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 5;
+
+   .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__logo {
+         @extend %logo;
+         font-size: 0.6em;
+      }
+
+      ul {
+         display: flex;
+         justify-content: space-between;
+         list-style-type: none;
+         width: 60%;
+
+         .navbar__link {
+            @include textShadow();
+            color: $light-shade;
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: $transition;
+
+            &:hover {
+               @include boxShadow($color: $light-shade);
+               border-radius: 0.5rem;
+               transition: $transition;
+            }
+
+            &:active {
+               @include boxShadow($bottom: -0.2rem, $right: -0.2rem, $color: $light-shade inset);
+               transition: $transition;
+            }
+         }
+      }
+   }
+}

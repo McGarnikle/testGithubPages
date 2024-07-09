@@ -1,0 +1,29 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+
+@media screen and (max-width: 1250px) {
+   %sub-footer-display {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+   }
+
+   .sub-footer {
+      @extend %sub-footer-display;
+      flex-direction: column;
+      width: 100%;
+
+      &__name,
+      &__social,
+      &__coords {
+         @extend %sub-footer-display;
+         width: 100%;
+      }
+
+      &__mail {
+         padding-left: 0;
+      }
+   }
+}

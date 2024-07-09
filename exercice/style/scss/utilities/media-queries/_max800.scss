@@ -1,0 +1,27 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+@media screen and (max-width: 800px) {
+
+   #contact {
+      iframe {
+         width: 100%;
+      }
+
+      .contact-display {
+         .contact {
+            width: 100%;
+         }
+      }
+   }
+
+   footer ul {
+      flex-direction: column;
+
+      .footer__link {
+         margin: 5rem;
+         padding: 1rem 0;
+      }
+   }
+
+}

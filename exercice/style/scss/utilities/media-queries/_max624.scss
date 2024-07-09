@@ -1,0 +1,18 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+@media screen and (max-width: 624px) {
+
+   .cast__card {
+      width: 100%;
+   }
+
+   .sub-footer__coords {
+      flex-direction: column;
+   }
+
+   .sub-footer__phone {
+      margin-bottom: 1rem;
+   }
+
+}

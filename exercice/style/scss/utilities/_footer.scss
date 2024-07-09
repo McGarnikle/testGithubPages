@@ -1,0 +1,117 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+%logo {
+   @include textShadow();
+   color: $light-accent;
+   font-family: "Higher-Jump";
+   text-decoration: none;
+   transition: $transition;
+
+   &:hover {
+      text-shadow: 0.1rem 0.1rem 0.1rem whitesmoke;
+      transition: $transition;
+   }
+}
+
+%link {
+   color: $light-shade;
+   margin: 0 1rem 3rem 1rem;
+   transition: $transition;
+
+   &:hover {
+      @include textShadow($color: $light-shade);
+      transition: $transition;
+   }
+}
+
+.footer {
+   @include boxShadow($bottom: -0.2rem, $right: -0.2rem);
+   background-image: $dark-gradient;
+   color: $light-shade;
+   margin-top: 5rem;
+
+   ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      white-space: nowrap;
+   }
+
+   &__link {
+      @extend %link;
+   }
+
+   &__hr {
+      @include boxShadow();
+      margin: 3rem 0;
+      border-color: $light-accent;
+      border-radius: 0.3rem;
+      border-width: 0.2rem;
+   }
+}
+
+.footer-logo {
+   display: flex;
+   justify-content: center;
+
+   &__link {
+      @extend %logo;
+      font-size: 1.2em;
+      margin: 3rem 0;
+   }
+}
+
+.sub-footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 2rem;
+
+   &__name,
+   &__social,
+   &__coords {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      width: 33%;
+   }
+
+   &__coords {
+      justify-content: flex-end;
+   }
+
+   &__coords a {
+      margin: 0 .5rem;
+   }
+
+   &__social {
+      display: flex;
+      justify-content: center;
+
+      a {
+         margin: 0 4%;
+      }
+   }
+
+   &__img {
+      border-radius: 0.7rem;
+
+      width: 2rem;
+      transition: $transition;
+
+      &:hover {
+         @include boxShadow($color: $light-accent);
+         transition: $transition;
+      }
+   }
+
+   .sub-footer__mail {
+      padding-left: 1rem;
+   }
+}
+
+.coords-img {
+   width: 1.2rem;
+   // height: 1.2rem;
+}

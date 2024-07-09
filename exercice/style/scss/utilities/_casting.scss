@@ -1,0 +1,55 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.casting {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   padding: 6rem 0 4% 0;
+
+   &-text {
+      width: 40%;
+
+      h2 {
+         @include textShadow();
+         font-size: 3em;
+         margin-bottom: 2rem;
+      }
+
+      &__description {
+         font-size: 1.15em;
+         font-weight: bold;
+      }
+   }
+}
+
+.casting-text {
+   width: 80%;
+}
+
+.cast {
+   display: flex;
+   justify-content: space-around;
+   padding-bottom: 4rem;
+
+   &__card {
+      border-right: 2px solid $light-accent;
+      padding: 0 1% 0 3%;
+      width: 25%;
+   }
+
+   img {
+      @include boxShadow();
+      border-radius: 0.5rem;
+      margin-bottom: 3%;
+      width: 50%;
+   }
+
+   &__character {
+      font-size: 1.25em;
+   }
+}
+
+.cast__no-border {
+   border: none;
+}

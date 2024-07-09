@@ -1,0 +1,12 @@
+/* ----------- Variables ---------- */
+$light-shade: #E7EAE8;
+$light-accent: #F8CB51;
+$main-brand: #BE9372;
+$dark-accent: #AE302D;
+$dark-shade: #222533;
+$dark-gradient: linear-gradient(45deg, $dark-accent, $dark-shade);
+$bg-body: linear-gradient(to bottom, $light-shade, $main-brand, $light-shade);
+$bg-stats: linear-gradient(45deg, $dark-shade, $light-shade, $light-shade, $dark-shade);
+$success: #09c372;
+$error: #ff3860;
+$transition: .5s;

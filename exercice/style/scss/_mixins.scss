@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+@mixin boxShadow($bottom: 0.2rem, $right: 0.2rem, $blur: 0.5rem, $color: $dark-shade) {
+   box-shadow: $bottom $right $blur $color;
+}
+
+@mixin textShadow($bottom: 0.2rem, $right: 0.2rem, $blur: 0.3rem, $color: $dark-shade){
+   text-shadow: $bottom $right $blur $color;
+}

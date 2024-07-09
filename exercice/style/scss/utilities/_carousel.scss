@@ -1,0 +1,18 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.hero {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 5rem;
+
+   /* classes Bootstrap */
+   .carousel {
+      @include boxShadow();
+      width: 66%;
+
+      .carousel-inner {
+         border-radius: 1rem;
+      }
+   }
+}
