@@ -1,11 +1,10 @@
 //Update cache names any time any of the cached files change.
 // !N’oubliez pas de changer le nom de version du service worker
-const CACHE_NAME = "static-cache-v2";
+const CACHE_NAME = "static-cache-v3";
 
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
-	'offline.html',
-	'index.html',
+	'offline.html'
 
 ];
 
@@ -53,7 +52,7 @@ self.addEventListener("fetch", evt => {
 		fetch(evt.request).catch(() => {
 			return caches.open(CACHE_NAME)
 				.then(cache => {
-				return cache.match("/Cochenille/PointNClick/offline.html");
+				return cache.match("offline.html");
 			});
 		})
 	);
