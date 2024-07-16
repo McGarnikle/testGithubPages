@@ -692,3 +692,6 @@ header .navbar ul .navbar__link:active {
   font-family: "Jost";
   src: url(../../assets/fonts/Jost-VariableFont_wght.ttf);
 }
+.nav-link {
+  margin-top: 11rem;
+}
